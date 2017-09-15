@@ -14,11 +14,12 @@ A més a més, incloure les mateixes funcions en altres interfícies, com per ex
 * Bot de Telegram
 
 ### Hardware
-* Raspberry Pi 3
-* Pantalla táctil HDMI+USB
-* Arduino 
-* Peretes Intel·ligents Yeelight RGBW
-* Placa ESP32 
+* [**Raspberry Pi 3 Model B**](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/): ARM 4-Core CPU, 1 GB RAM, WiFi+BLE, 2xUSB, 40xGPIO
+* **Pantalla táctil 5" HDMI+USB**
+* **Arduino [Mini](https://store.arduino.cc/arduino-mini-05) o [Nano](https://store.arduino.cc/arduino-nano)**
+* Peretes Intel·ligents [**Yeelight RGBW**](http://www.yeelight.com/en_US/product/wifi-led-c)
+* [**WeMos LOLIN32**](https://wiki.wemos.cc/products:lolin32:lolin32): Placa ESP32 WiFi + BLE 
+* [**WeMos D1 Mini**](https://wiki.wemos.cc/products:d1:d1_mini): Placa base ESP8266EX WiFi
 * Sensor de temperatura
 * Emisor i receptor de infrarrojos
 
