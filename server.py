@@ -1,7 +1,7 @@
 from bottle import Bottle, run, request
 
 from utils.BulbArray import BulbArray
-from utils.Enumerations import LightParameters
+from utils.Enumerations import LightParameters, NotificationParameters, SensorParameters, SensorTypes
 
 app = Bottle()
 bulbs = BulbArray(timeout=3)
@@ -65,6 +65,24 @@ def notifications():
     print((state, index))
 
     keys = state.keys()
+
+
+@app.route('/sensor')
+def sensor():
+    index = request.GET.index if SensorParameters.INDEX.value in request.GET else -1
+
+    if SensorParameters.TYPE.value in request.GET:
+        print(request.GET.type)
+
+        if SensorTypes.TEMPERATURE.value == request.GET.type:
+            if SensorParameters.VALUE.value in request.GET:
+                # TODO: do something with temperature
+                # TODO: check if value is a number between an upper and lower limit
+                temperature_value = request.GET.value
+            else:
+                # TODO: return an error saying there is no temperature
+                pass
+        # TODO: add more sensors
 
 
 if __name__ == "__main__":

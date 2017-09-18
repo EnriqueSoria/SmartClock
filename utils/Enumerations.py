@@ -15,6 +15,15 @@ class NotificationParameters(StrEnum):
     TITLE, APP, TEXT = "title app text".split()
 
 
+class SensorTypes(StrEnum):
+    TEMPERATURE = "temperature"
+
+
+class SensorParameters(StrEnum):
+    """ Enumeration that contains the possible /sensor parameters """
+    TYPE, INDEX, VALUE, BATTERY_LEVEL = "type index value battery_level".split()
+
+
 class PowerStates(IntEnum):
     """ Enumeration that describes the state of the bulb
          0: OFF
