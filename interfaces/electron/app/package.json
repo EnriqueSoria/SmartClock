@@ -1,0 +1,7 @@
+{
+  "name": "smartclock-electron-app",
+  "version": "1.0.0",
+  "description": "An interface for SmartClock",
+  "main": "app.js",
+  "author": "Enrique Soria Magraner"
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Photon</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/photon.min.css">
+
+    <!-- Javascript -->
+    <script src="js/menu.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="window">
+
+      <!-- .toolbar-header sits at the top of your app 
+      <header class="toolbar toolbar-header">
+        <h1 class="title">Photon</h1>
+      </header>-->
+
+      <!-- Your app's content goes inside .window-content -->
+      <div class="window-content">
+        <div class="pane-group">
+          <div class="pane pane-sm sidebar">
+            <ul class="list-group">
+              <li class="list-group-item" onClick="changePanel('home')">
+                <div class="media-body">
+                    <p style="font-size: 350%" class="text-center">
+                        <span class="icon icon-home">
+                    </p>
+                  <p style="font-size: 300%" class="text-center"><strong> Inici </strong></p> 
+                  <p style="font-size: 200%" class="text-center">
+                    <span class="icon icon-clock"></span>
+                    <script>var d=new Date(); document.write(d.getHours().toString()+":"+d.getMinutes() )</script>
+                    <span class="icon icon-thermometer"></span>
+                    <script>var d=new Date(); document.write("   "+d.getHours().toString()+"º")</script>
+                  </p>
+                </div>
+              </li>
+              <li class="list-group-item" onClick="changePanel('notification')">
+                <div class="media-body">
+                  <p style="font-size: 250%" class="text-center">
+                    <span class="icon icon-mobile"></span>
+                    <span style="font-size: 75%" class="text-center">
+                        <strong>
+                            Notificacions 
+                            <script>document.write('<span style="font-size: 75%; color: red;" class="icon icon-alert"></span>')</script>
+                        </strong>
+                    </span>
+                  </p>
+                </div>
+              </li>
+              <li class="list-group-item" onClick="changePanel('ilumination')">
+                <div class="media-body">
+                  <p style="font-size: 250%" class="text-center">
+                    <span class="icon icon-lamp"></span>
+                    <span style="font-size: 75%" class="text-center">
+                        <strong>
+                            Il·luminació 
+                            <script>var c='rgb(255, 204, 0)';document.write('<span style="font-size: 75%; color: '+c+';" class="icon icon-light-up">')</script>
+                        </strong>
+                    </span>
+                  </p>
+                </div>
+              </li>
+              <li class="list-group-item" "changePanel('clima')">
+                <div class="media-body">
+                  <p style="font-size: 250%" class="text-center">
+                    <span class="icon icon-thermometer">
+                    <span style="font-size: 75%" class="text-center">
+                        <strong>
+                            Climatització 
+                            <script>var c='blue';document.write('<span style="font-size: 75%; color: '+c+';" class="icon icon-air">')</script>
+                        </strong>
+                    </span>
+                  </p>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+
+          <div class="pane" onLoad="changePanel('home')">
+            <script>
+                function changePanel(panel){
+                
+                    switch(panel){
+                    
+                        case "home":
+                            alert("home"); break;
+                    
+                        case "notification":
+                            alert("notification"); break;
+                    }
+                }
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
