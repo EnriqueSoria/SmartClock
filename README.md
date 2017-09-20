@@ -1,6 +1,8 @@
 # SmartClock
 Un projecte personal que combina coneixements de diversos llenguatges i tecnologies.
 
+![image](https://user-images.githubusercontent.com/7394684/30552627-ebfd4fac-9c9e-11e7-935c-7dacf9206f06.png)
+
 ## Objectius del projecte
 Tindre un rellotge intel·ligent d'escriptori el qual tinga les següents funcions:
 * Mostrar l'hora
@@ -26,7 +28,7 @@ A més a més, incloure les mateixes funcions en altres interfícies, com per ex
 ### Software
 * Servidor web -> `python 3` + `bottle.py`
 * Client Android -> `Java` + `Android`
-* Client d'escriptori -> `python 3` + `pygobject` 
+* Client d'escriptori -> ~~`python 3` + `pygobject`~~ `html+css+js` + `electron` + `photon`
 * Bot de telegram -> `python` + `python-telegram-bot`
 * ESP32 -> `lua`
 * Arduino firmware
