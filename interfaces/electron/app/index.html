@@ -5,9 +5,11 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../css/photon.min.css">
+    <link rel="stylesheet" href="../css/timeline.css">
 
     <!-- Javascript -->
     <script src="js/menu.js" charset="utf-8"></script>
+    
   </head>
   <body>
     <div class="window">
@@ -49,7 +51,7 @@
                   </p>
                 </div>
               </li>
-              <li class="list-group-item" onClick="changePanel('ilumination')">
+              <li class="list-group-item" onClick="changePanel('light')">
                 <div class="media-body">
                   <p style="font-size: 250%" class="text-center">
                     <span class="icon icon-lamp"></span>
@@ -65,11 +67,11 @@
               <li class="list-group-item" "changePanel('clima')">
                 <div class="media-body">
                   <p style="font-size: 250%" class="text-center">
-                    <span class="icon icon-thermometer">
+                    <span class="icon icon-thermometer"></span>
                     <span style="font-size: 75%" class="text-center">
                         <strong>
                             Climatització 
-                            <script>var c='blue';document.write('<span style="font-size: 75%; color: '+c+';" class="icon icon-air">')</script>
+                            <script>var c='blue';document.write('<span style="font-size: 75%; color: '+c+';" class="icon icon-air"></span>')</script>
                         </strong>
                     </span>
                   </p>
@@ -79,20 +81,73 @@
             </ul>
           </div>
 
-          <div class="pane" onLoad="changePanel('home')">
-            <script>
+          <script>
+                var request = require('request');
                 function changePanel(panel){
-                
                     switch(panel){
-                    
-                        case "home":
-                            alert("home"); break;
-                    
+                        case "home": 
+                            document.getElementById("paneHome").style.display = ''; 
+                            document.getElementById("paneLight").style.display = 'none'; 
+                            document.getElementById("paneNotification").style.display = 'none'; 
+                            break;
+                        case "light":
+                            document.getElementById("paneHome").style.display = 'none';
+                            document.getElementById("paneLight").style.display = ''; 
+                            document.getElementById("paneNotification").style.display = 'none'; 
+                            break;
                         case "notification":
-                            alert("notification"); break;
+                            document.getElementById("paneHome").style.display = 'none';
+                            document.getElementById("paneLight").style.display = 'none'; 
+                            document.getElementById("paneNotification").style.display = ''; 
+                            break;
                     }
                 }
             </script>
+          
+          
+          <!-- Home panel -->
+          <div class="pane" id="paneHome">
+            
+          </div>
+          
+          <!-- Light panel -->
+          <div class="pane" id="paneLight" style="display: none">
+            <p>test iluminati</p>
+          </div>
+          
+          <!-- Notification panel --> 
+          <div class="pane" id="paneNotification" style="display: none">
+            <ul class="cbp_tmtimeline">
+                <li>
+                    <time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>4/10/13</span> <span>18:30</span></time>
+                    <div class="cbp_tmicon"><span class="icon icon-facebook-squared"></span></div>
+                    
+                    <div class="cbp_tmlabel">
+                        <h2><strong>Facebook | Raimond Andreu publicó en Peña</strong></h2>
+                        <p>https://www.genbeta.com/seguridad/han-hackeado-ccleaner-actualiza-cuanto-antes</p>
+                        <span class="icon icon-trash pull-right"></span>
+                    </div>
+                </li>
+                <li>
+                    <time class="cbp_tmtime" datetime="2013-04-11T12:04"><span>4/11/13</span> <span>12:04</span></time>
+                    <div class="cbp_tmicon"><span class="icon icon-instagram"></span></div>
+                    <div class="cbp_tmlabel">
+                        <h2><strong>Instagram | No se quien ha empezado un video en directo</strong></h2>
+                        <p>¡Míralo antes de que termine!</p>
+                        <span class="icon icon-trash pull-right"></span>
+                    </div>
+                    
+                </li>
+                <li>
+                    <time class="cbp_tmtime" datetime="2013-04-11T12:04"><span>4/11/13</span> <span>12:04</span></time>
+                    <div class="cbp_tmicon"><span class="icon icon-progress-1"></span></div>
+                    <div class="cbp_tmlabel">
+                        <h2><strong>Mi band tools | La bateria de la mi band se está descargando</strong></h2>
+                        <p>Pulsar para reanudar la monitorización del ritmo cardíaco</p>
+                        <span class="icon icon-trash pull-right"></span>
+                    </div>
+                </li>
+            </ul>
           </div>
         </div>
       </div>

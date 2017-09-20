@@ -3,5 +3,9 @@
   "version": "1.0.0",
   "description": "An interface for SmartClock",
   "main": "app.js",
-  "author": "Enrique Soria Magraner"
+  "author": "Enrique Soria Magraner",
+  "dependencies": {
+    "remote": "^0.2.6",
+    "request": "^2.81.0"
+  }
 }
